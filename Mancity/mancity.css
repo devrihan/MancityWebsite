@@ -39,11 +39,27 @@ html,body{
 
 }
 #navleft a{
+    position: relative;
     margin-left: 40px;
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-weight: 700;
     font-size: 20px;
+}
+
+#navleft a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #001838 ;
+    position: absolute;
+    left: 0%;
+    bottom: -15%;
+    transition: 0.5s;
+}
+
+#navleft a:hover::after{
+    width: 100%;
 }
 
 #navright i{
